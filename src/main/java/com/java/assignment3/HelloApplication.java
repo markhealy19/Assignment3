@@ -25,10 +25,15 @@ public class HelloApplication extends Application {
     }
 
     public boolean passwordCheck(String password) {
-        if (password.length() < 7) {
-            return true;
+        //if (password.length() > 7) {
+            //return true;
+
+        //}
+        for (int i = 0; i < password.length(); i++){
+            if (Character.isLetter(password.charAt(i)))
+                return false;
         }
-        return false;
+        return true;
     }
 
     @Override
