@@ -17,6 +17,13 @@ public class HelloApplication extends Application {
         return true;
     }
 
+    public boolean emailAddressCheck(String email) {
+        if (email.length() < 1) {
+            return true;
+        }
+        return false;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));

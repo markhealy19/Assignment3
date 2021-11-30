@@ -13,17 +13,12 @@ public class HelloApplicationTest {
         HelloApplication app = new HelloApplication();
         assertTrue(app.example1());
     }
-    /*
-    @Test
-    public static boolean testValidEmail(String email) {
-        //String emailRegex =
-        String emailCheck = "^[0-9A-Za-z_.]" + "[@]" + "[a-zA-Z]" + "[.]" + "[a-zA-Z]$";
 
-        Pattern pat = Pattern.compile(emailCheck);
-        if (email == null)
-            return false;
-        return pat.matcher(email).matches();
+    @Test
+    public void testEmailIsNotNull(){
+        HelloApplication app = new HelloApplication();
+        assertFalse(app.emailAddressCheck("dferv"));
     }
 
-    */
+
 }
