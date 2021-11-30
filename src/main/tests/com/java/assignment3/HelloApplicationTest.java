@@ -23,7 +23,7 @@ public class HelloApplicationTest {
     @Test
     public void testPasswordLength(){
         HelloApplication app = new HelloApplication();
-        assertFalse(app.passwordCheck());
+        assertFalse(app.passwordCheck("adsea3412"));
     }
 
 

@@ -24,8 +24,11 @@ public class HelloApplication extends Application {
         return false;
     }
 
-    public boolean passwordCheck(){
-        return true;
+    public boolean passwordCheck(String password) {
+        if (password.length() < 7) {
+            return true;
+        }
+        return false;
     }
 
     @Override
