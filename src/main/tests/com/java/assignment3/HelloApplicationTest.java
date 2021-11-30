@@ -20,5 +20,11 @@ public class HelloApplicationTest {
         assertFalse(app.emailAddressCheck("dferv"));
     }
 
+    @Test
+    public void testPasswordLength(){
+        HelloApplication app = new HelloApplication();
+        assertFalse(app.passwordCheck());
+    }
+
 
 }

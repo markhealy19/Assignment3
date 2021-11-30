@@ -24,6 +24,10 @@ public class HelloApplication extends Application {
         return false;
     }
 
+    public boolean passwordCheck(){
+        return true;
+    }
+
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
