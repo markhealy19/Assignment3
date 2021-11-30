@@ -1,8 +1,12 @@
 package com.java.assignment3;
 
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,21 +17,36 @@ import java.io.IOException;
 
 
 public class HelloApplication extends Application {
+    @FXML
+    Label emailLabel = new Label("Email Address:");
+    @FXML
+    TextField emailTextField = new TextField();
+    @FXML
+    Label passwordLabel = new Label("Password:");
+    @FXML
+    TextField passwordTextField = new TextField();
+
 
     public boolean example1() {
         return true;
     }
 
     public boolean emailAddressCheck(String email) {
+
+        if (emailTextField.getText().length() > 0) {
+            String emailFormat = "^[0-9a-zA-Z]+@[0-9a-zA-Z]+\\.[0-9a-zA-Z]+$";
+            Pattern emailPattern = Pattern.compile(emailFormat);
+            if (emailPattern.matcher(email).matches()) {
+                return false;
+            }
         /*
-        if (email.length() < 1) {
-            return true;
-        }
-        */
         String emailFormat = "^[0-9a-zA-Z]+@[0-9a-zA-Z]+\\.[0-9a-zA-Z]+$";
         Pattern emailPattern = Pattern.compile(emailFormat);
         if (emailPattern.matcher(email).matches()){
             return false;
+        }
+
+         */
         }
         return true;
     }

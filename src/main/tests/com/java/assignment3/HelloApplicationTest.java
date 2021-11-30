@@ -21,9 +21,9 @@ public class HelloApplicationTest {
     }
 
     @Test
-    public void testEmailContainsAtSymbol(){
+    public void testEmailFormat(){
         HelloApplication app = new HelloApplication();
-        assertFalse(app.emailAddressCheck("markd@anhealygmail.s"));
+        assertFalse(app.emailAddressCheck("m@arkdanhealygmail.s"));
     }
 
     @Test
