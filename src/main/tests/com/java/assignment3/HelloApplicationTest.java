@@ -41,7 +41,7 @@ public class HelloApplicationTest {
     @Test
     public void testPasswordSpecialCharacter(){
         HelloApplication app = new HelloApplication();
-        assertFalse(app.passwordCheck("122dfwferf321"));
+        assertFalse(app.passwordCheck("&tghrf321"));
     }
 
 }

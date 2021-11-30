@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.*;
 
 import java.io.IOException;
 
@@ -25,20 +26,22 @@ public class HelloApplication extends Application {
     }
 
     public boolean passwordCheck(String password) {
-        /*
+
+        String SpecialCharList = "*^&@!";
         if (password.length() > 6) {
             for (int i = 0; i < password.length(); i++) {
                 if (Character.isLetter(password.charAt(i)))
                     for (int x = 0; x < password.length(); x++) {
                         if (Character.isDigit(password.charAt(x)))
-                            return false;
-                    }
+                            for (int y = 0; y < password.length(); y++)
+                                for (int z = 0; z < SpecialCharList.length(); z++)
+                                    if (SpecialCharList.charAt(z) == password.charAt(y)) {
+                                        return false;
+                                    }
 
+                    }
             }
         }
-
-         */
-
         return true;
     }
 
