@@ -23,7 +23,7 @@ public class HelloApplicationTest {
     @Test
     public void testEmailContainsAtSymbol(){
         HelloApplication app = new HelloApplication();
-        assertFalse(app.emailAddressCheck("dferv"));
+        assertFalse(app.emailAddressCheck("markd@anhealygmail.s"));
     }
 
     @Test

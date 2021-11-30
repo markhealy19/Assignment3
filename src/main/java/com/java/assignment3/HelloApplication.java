@@ -24,8 +24,12 @@ public class HelloApplication extends Application {
             return true;
         }
         */
-
-        return false;
+        String emailFormat = "^[0-9a-zA-Z]+@[0-9a-zA-Z]+\\.[0-9a-zA-Z]+$";
+        Pattern emailPattern = Pattern.compile(emailFormat);
+        if (emailPattern.matcher(email).matches()){
+            return false;
+        }
+        return true;
     }
 
     public boolean passwordCheck(String password) {
