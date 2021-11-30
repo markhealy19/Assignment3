@@ -37,13 +37,12 @@ public class HelloApplication extends Application {
           //  if (Character.isLetter(password.charAt(i)))
             //    return false;
         //}
-        /*
+
         for (int x = 0; x < password.length(); x++){
-        if (Character.isDigit(password.charAt(x)))
-            return false;
+            if (Character.isDigit(password.charAt(x)))
+                return false;
         }
 
-         */
         return true;
     }
 
