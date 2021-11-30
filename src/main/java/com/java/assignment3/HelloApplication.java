@@ -25,14 +25,25 @@ public class HelloApplication extends Application {
     }
 
     public boolean passwordCheck(String password) {
-        //if (password.length() > 7) {
-            //return true;
-
+        /*
+        if (password.length() > 6) {
+            for (int i = 0; i < password.length(); i++){
+                if (Character.isLetter(password.charAt(i)))
+                    return false;
+            }
+        */
         //}
-        for (int i = 0; i < password.length(); i++){
-            if (Character.isLetter(password.charAt(i)))
-                return false;
+        //for (int i = 0; i < password.length(); i++){
+          //  if (Character.isLetter(password.charAt(i)))
+            //    return false;
+        //}
+        /*
+        for (int x = 0; x < password.length(); x++){
+        if (Character.isDigit(password.charAt(x)))
+            return false;
         }
+
+         */
         return true;
     }
 

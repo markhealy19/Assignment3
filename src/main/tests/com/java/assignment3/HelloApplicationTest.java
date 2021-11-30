@@ -23,11 +23,17 @@ public class HelloApplicationTest {
     @Test
     public void testPasswordLength(){
         HelloApplication app = new HelloApplication();
-        assertFalse(app.passwordCheck("adse"));
+        assertFalse(app.passwordCheck("adsedsw"));
     }
 
     @Test
     public void testPasswordLetter(){
+        HelloApplication app = new HelloApplication();
+        assertFalse(app.passwordCheck("12sqd"));
+    }
+
+    @Test
+    public void testPasswordDigit(){
         HelloApplication app = new HelloApplication();
         assertFalse(app.passwordCheck("12345Adwa"));
     }
