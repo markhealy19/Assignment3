@@ -35,7 +35,13 @@ public class HelloApplicationTest {
     @Test
     public void testPasswordDigit(){
         HelloApplication app = new HelloApplication();
-        assertFalse(app.passwordCheck("12Adwa"));
+        assertFalse(app.passwordCheck("122dfwferf321"));
+    }
+
+    @Test
+    public void testPasswordSpecialCharacter(){
+        HelloApplication app = new HelloApplication();
+        assertFalse(app.passwordCheck("122dfwferf321"));
     }
 
 }
