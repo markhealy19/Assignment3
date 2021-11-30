@@ -19,9 +19,12 @@ public class HelloApplication extends Application {
     }
 
     public boolean emailAddressCheck(String email) {
+        /*
         if (email.length() < 1) {
             return true;
         }
+        */
+
         return false;
     }
 

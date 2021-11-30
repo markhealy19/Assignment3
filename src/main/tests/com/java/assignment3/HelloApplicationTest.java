@@ -21,6 +21,12 @@ public class HelloApplicationTest {
     }
 
     @Test
+    public void testEmailContainsAtSymbol(){
+        HelloApplication app = new HelloApplication();
+        assertFalse(app.emailAddressCheck("dferv"));
+    }
+
+    @Test
     public void testPasswordLength(){
         HelloApplication app = new HelloApplication();
         assertFalse(app.passwordCheck("adsedsw"));
