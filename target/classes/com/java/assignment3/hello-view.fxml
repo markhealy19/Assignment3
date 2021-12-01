@@ -16,6 +16,7 @@
     <TextField fx:id="emailTextField"/>
     <Label text="Password" fx:id="passwordLabel"/>
     <TextField fx:id="passwordTextField"/>
-    <Button text="Submit" />
+    <Label  fx:id="submitButton"/>
+    <Button text="Submit" onAction="#onHelloButtonClick"/>
 
 </VBox>

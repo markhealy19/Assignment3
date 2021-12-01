@@ -3,10 +3,12 @@ package com.java.assignment3;
 import javafx.application.Application;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HelloApplicationTest {
+
 
     @Test
     public void testExample1(){

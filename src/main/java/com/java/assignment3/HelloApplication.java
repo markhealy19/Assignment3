@@ -17,6 +17,7 @@ import java.io.IOException;
 
 
 public class HelloApplication extends Application {
+
     @FXML
     Label emailLabel = new Label("Email Address:");
     @FXML
@@ -25,6 +26,19 @@ public class HelloApplication extends Application {
     Label passwordLabel = new Label("Password:");
     @FXML
     TextField passwordTextField = new TextField();
+    @FXML
+    Label submitButton = new Label("Submit");
+    @FXML
+    protected void onHelloButtonClick() {
+        if (((emailAddressCheck(emailTextField.getText()))==false) & ((passwordCheck(passwordTextField.getText()))==false)){
+            submitButton.setText("Welcome!!");
+        } else {
+            submitButton.setText("Please enter the required details correctly");
+        }
+
+
+    }
+
 
 
     public boolean example1() {
@@ -33,8 +47,8 @@ public class HelloApplication extends Application {
 
     public boolean emailAddressCheck(String email) {
 
-        if (emailTextField.getText().length() > 0) {
-            String emailFormat = "^[0-9a-zA-Z]+@[0-9a-zA-Z]+\\.[0-9a-zA-Z]+$";
+        if (email.length() > 0) {
+            String emailFormat = "^[0-9a-zA-Z._-]+@[0-9a-zA-Z]+\\.[0-9a-zA-Z]+$";
             Pattern emailPattern = Pattern.compile(emailFormat);
             if (emailPattern.matcher(email).matches()) {
                 return false;
@@ -74,6 +88,13 @@ public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+
+        /*
+        Label emailLabel = new Label("Email Address:");
+        TextField emailTextField = new TextField();
+        Label passwordLabel = new Label("Password:");
+        TextField passwordTextField = new TextField();
+        */
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Registration Form");
         stage.setScene(scene);
