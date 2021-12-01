@@ -3,52 +3,43 @@ package com.java.assignment3;
 import javafx.application.Application;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.BeforeEach;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-public class HelloApplicationTest {
 
 
-    @Test
-    public void testExample1(){
-        HelloApplication app = new HelloApplication();
-        assertTrue(app.example1());
-    }
+public class MyApplicationTest {
 
     @Test
     public void testEmailIsNotNull(){
-        HelloApplication app = new HelloApplication();
+        MyApplication app = new MyApplication();
         assertFalse(app.emailAddressCheck("dferv"));
     }
 
     @Test
     public void testEmailFormat(){
-        HelloApplication app = new HelloApplication();
+        MyApplication app = new MyApplication();
         assertFalse(app.emailAddressCheck("m@arkdanhealygmail.s"));
     }
 
     @Test
     public void testPasswordLength(){
-        HelloApplication app = new HelloApplication();
+        MyApplication app = new MyApplication();
         assertFalse(app.passwordCheck("adsedsw"));
     }
 
     @Test
     public void testPasswordLetter(){
-        HelloApplication app = new HelloApplication();
+        MyApplication app = new MyApplication();
         assertFalse(app.passwordCheck("12sqd"));
     }
 
     @Test
     public void testPasswordDigit(){
-        HelloApplication app = new HelloApplication();
+        MyApplication app = new MyApplication();
         assertFalse(app.passwordCheck("122dfwferf321"));
     }
 
     @Test
     public void testPasswordSpecialCharacter(){
-        HelloApplication app = new HelloApplication();
+        MyApplication app = new MyApplication();
         assertFalse(app.passwordCheck("&tghrf321"));
     }
 
