@@ -13,31 +13,7 @@ import java.io.IOException;
 
 
 public class MyApplication extends Application {
-    /*
-    @FXML
-    Label emailLabel = new Label("Email Address:");
-    @FXML
-    TextField emailTextField = new TextField();
-    @FXML
-    Label passwordLabel = new Label("Password:");
-    @FXML
-    TextField passwordTextField = new TextField();
-    @FXML
-    Label submitButton = new Label("Submit");
 
-
-    @FXML
-    protected void onSubmitButtonClick() {
-        MyApplication myApplication = new MyApplication();
-        if (((!myApplication.emailAddressCheck(emailTextField.getText()))) & ((!myApplication.passwordCheck(passwordTextField.getText())))){
-            submitButton.setText("Welcome!!");
-        } else {
-            submitButton.setText("Please enter the required details correctly");
-        }
-    }
-
-
-     */
     public boolean emailAddressCheck(String email) {
 
         if (email.length() > 0) {
