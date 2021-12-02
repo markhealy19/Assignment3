@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Button?>
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.java.assignment3.MyApplication">
+      fx:controller="com.java.assignment3.MyController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
@@ -16,7 +16,7 @@
     <TextField fx:id="emailTextField"/>
     <Label text="Password" fx:id="passwordLabel"/>
     <TextField fx:id="passwordTextField"/>
-    <Label  fx:id="submitButton"/>
+    <Label fx:id="submitButton"/>
     <Button text="Submit" onAction="#onSubmitButtonClick"/>
 
 </VBox>
